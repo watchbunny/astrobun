@@ -1,10 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://cnfw6qv87c331"]
+[gd_scene load_steps=4 format=3 uid="uid://cnfw6qv87c331"]
 
 [ext_resource type="PackedScene" uid="uid://3xqvcqrq0i0s" path="res://Bunny/Bunny.tscn" id="1_stdga"]
+[ext_resource type="PackedScene" uid="uid://3lu2qqwr8mj5" path="res://Platform/Platform.tscn" id="1_y2wtq"]
 [ext_resource type="Script" path="res://Bunny/Bunny.gd" id="2_f4jrq"]
 
 [node name="World" type="Node"]
 
+[node name="Platform" parent="." instance=ExtResource("1_y2wtq")]
+position = Vector2(-11, -64)
+
 [node name="Bunny" parent="." instance=ExtResource("1_stdga")]
-position = Vector2(446, 136)
+position = Vector2(302, 162)
 script = ExtResource("2_f4jrq")
