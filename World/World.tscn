@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnfw6qv87c331"]
+
+[ext_resource type="PackedScene" uid="uid://3xqvcqrq0i0s" path="res://Bunny/Bunny.tscn" id="1_stdga"]
+[ext_resource type="Script" path="res://Bunny/Bunny.gd" id="2_f4jrq"]
+
+[node name="World" type="Node"]
+
+[node name="Bunny" parent="." instance=ExtResource("1_stdga")]
+position = Vector2(446, 136)
+script = ExtResource("2_f4jrq")
