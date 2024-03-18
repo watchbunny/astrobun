@@ -23,3 +23,8 @@ func flip():
 		speed = abs(speed)
 	else:
 		speed = abs(speed) * -1
+
+
+func _on_area_2d_area_entered(area):
+	if area.get_parent() is Bunny:
+		area.get_parent().queue_free()

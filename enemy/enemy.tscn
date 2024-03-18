@@ -1,11 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://cpdw011ffow43"]
+[gd_scene load_steps=5 format=3 uid="uid://cpdw011ffow43"]
 
 [ext_resource type="Texture2D" uid="uid://bc1f07cuap6no" path="res://enemy/Illustration.png" id="1_nkj8e"]
+[ext_resource type="Script" path="res://enemy/enemy.gd" id="1_opxsn"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ait7t"]
 radius = 13.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m3y5s"]
+radius = 13.0
+
 [node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_opxsn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
@@ -19,3 +24,11 @@ texture = ExtResource("1_nkj8e")
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2(45, 0)
 target_position = Vector2(0, 14)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_m3y5s")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cnfw6qv87c331"]
+[gd_scene load_steps=6 format=3 uid="uid://cnfw6qv87c331"]
 
 [ext_resource type="PackedScene" uid="uid://df1p4rcvqh6nk" path="res://Scenes/Background/Background.tscn" id="1_2no4l"]
 [ext_resource type="PackedScene" uid="uid://3xqvcqrq0i0s" path="res://Bunny/Bunny.tscn" id="1_stdga"]
 [ext_resource type="Script" path="res://Bunny/Bunny.gd" id="2_f4jrq"]
 [ext_resource type="PackedScene" uid="uid://dudjfnxmlpapv" path="res://Scenes/Tiles/tile_map.tscn" id="2_r66cc"]
 [ext_resource type="PackedScene" uid="uid://cpdw011ffow43" path="res://enemy/enemy.tscn" id="3_u8v5u"]
-[ext_resource type="Script" path="res://enemy/enemy.gd" id="4_7vgv7"]
 
 [node name="Game" type="Node"]
 
@@ -15,11 +14,9 @@
 
 [node name="Enemy" parent="Background" instance=ExtResource("3_u8v5u")]
 position = Vector2(21, 97)
-script = ExtResource("4_7vgv7")
 
 [node name="Enemy2" parent="Background" instance=ExtResource("3_u8v5u")]
 position = Vector2(262, 65)
-script = ExtResource("4_7vgv7")
 
 [node name="Bunny" parent="Background" instance=ExtResource("1_stdga")]
 position = Vector2(28, 285)

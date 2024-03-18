@@ -4,11 +4,16 @@ class_name Bunny
 @export var speed = 200
 @export var jump_height = -400
 
-@onready var bunny = $"."
+@onready var sprite = $BunnyIdle
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _physics_process(delta):
+	if Input.is_action_just_pressed("left"):
+		sprite.scale.x = abs(sprite.scale.x) * -1
+	if Input.is_action_just_pressed("right"):
+		sprite.scale.x = abs(sprite.scale.x) * 1
+		
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	
