@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpdw011ffow43"]
+
+[ext_resource type="Texture2D" uid="uid://bc1f07cuap6no" path="res://enemy/Illustration.png" id="1_nkj8e"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ait7t"]
+radius = 13.0
+
+[node name="Enemy" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_ait7t")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(-0.96, 1)
+texture = ExtResource("1_nkj8e")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(45, 0)
+target_position = Vector2(0, 14)

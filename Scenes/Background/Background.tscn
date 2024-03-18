@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://df1p4rcvqh6nk"]
+
+[ext_resource type="Texture2D" uid="uid://bbi0aluob4k66" path="res://Scenes/Background/Illustration9.png" id="1_2io1n"]
+
+[node name="Background" type="TextureRect"]
+texture_filter = 1
+offset_right = 651.0
+offset_bottom = 365.0
+texture = ExtResource("1_2io1n")
+
+[node name="Foreground" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
