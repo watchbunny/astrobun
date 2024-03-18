@@ -1,5 +1,7 @@
 extends Node
 class_name World
 
-#func OnQuitPressed():
-	#get_tree().quit()
+
+func _input(event):
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().quit()

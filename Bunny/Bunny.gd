@@ -6,6 +6,8 @@ class_name Bunny
 
 @onready var sprite = $BunnyIdle
 
+const BULLET = preload("res://Bullet/bullet.tscn")
+
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _physics_process(delta):
@@ -26,17 +28,12 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 	
-	#if horizontal_direction>0:
-		#bunny.flip_h=false
-		#RayCast2D.scale.x=-.5
-		#
-	#elif horizontal_direction<0:
-		#bunny.flip_h=true
-		#RayCast2D.scale.x=.5
-		
-		
-		
+	
 	move_and_slide()
-	
-	
 
+func _shoot():
+	if Input.is_action_just_pressed("shoot"):
+		var bullet = BULLET.instantiate()
+	
+		get_parent().add_child(bullet)
+		bullet.position = position

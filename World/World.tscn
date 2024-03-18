@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cnfw6qv87c331"]
+[gd_scene load_steps=7 format=3 uid="uid://cnfw6qv87c331"]
 
 [ext_resource type="PackedScene" uid="uid://df1p4rcvqh6nk" path="res://Scenes/Background/Background.tscn" id="1_2no4l"]
 [ext_resource type="PackedScene" uid="uid://3xqvcqrq0i0s" path="res://Bunny/Bunny.tscn" id="1_stdga"]
 [ext_resource type="Script" path="res://Bunny/Bunny.gd" id="2_f4jrq"]
 [ext_resource type="PackedScene" uid="uid://dudjfnxmlpapv" path="res://Scenes/Tiles/tile_map.tscn" id="2_r66cc"]
 [ext_resource type="PackedScene" uid="uid://cpdw011ffow43" path="res://enemy/enemy.tscn" id="3_u8v5u"]
+[ext_resource type="PackedScene" uid="uid://bxehylsbmumnd" path="res://Title/Title.tscn" id="6_vfhbb"]
 
 [node name="Game" type="Node"]
 
@@ -21,3 +22,7 @@ position = Vector2(262, 65)
 [node name="Bunny" parent="Background" instance=ExtResource("1_stdga")]
 position = Vector2(28, 285)
 script = ExtResource("2_f4jrq")
+
+[node name="Control" parent="Background" instance=ExtResource("6_vfhbb")]
+visible = false
+layout_mode = 1

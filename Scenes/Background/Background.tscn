@@ -4,8 +4,8 @@
 
 [node name="Background" type="TextureRect"]
 texture_filter = 1
-offset_right = 651.0
-offset_bottom = 365.0
+offset_right = 639.0
+offset_bottom = 360.0
 texture = ExtResource("1_2io1n")
 
 [node name="Foreground" type="TextureRect" parent="."]
