@@ -16,3 +16,7 @@ texture_filter = 1
 position = Vector2(0.999999, 1)
 scale = Vector2(0.855, 0.855)
 texture = ExtResource("1_4qane")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(15, 3)
+gizmo_extents = 2.0
